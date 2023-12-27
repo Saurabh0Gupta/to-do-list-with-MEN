@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="main">
+      <div id="to">
+        <h1 style="color: #fff; font-family: gilroy; ">TO-DO List</h1>
+      </div>
+      <div id="input">
+        <form action="/update/<%=tasks._id%>" method="post">
+          <input style="background-color: #fff;" type="text" name="task" placeholder="enter your task" id="task" value="<%=tasks.task%>"> 
+          <input id="btn" type="submit" value="Update">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

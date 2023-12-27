@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="main">
+      <div id="to">
+        <h1 style="color: #fff; font-family: gilroy; ">TO-DO List</h1>
+      </div>
+      <div id="input">
+        <form action="/create" method="post">
+          <input style="background-color: #fff;" type="text" name="task" placeholder="enter your task" id="task"> 
+          <input id="btn" type="submit">
+        </form>
+      </div>
+      <%tasks.forEach(function(task){ %>
+        <div class="task">
+          <p id="paira" style="color: #fff;"><%=task.task%></p>
+          <p id="date"><%=task.datecreated%></p>
+          <div id="operation">
+            <a id="delete" href="/delete/<%=task._id%>">Completed</a>
+            <a id="update" href="/update/<%=task._id%>">Change</a>
+          </div>
+        </div>
+      <%})%>
+
+    </div>
+  </body>
+</html>
